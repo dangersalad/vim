@@ -1,2 +1,63 @@
+" use Vim settings only
+set nocompatible
+
+" initialize pathogen
+runtime pathogen/autoload/pathogen.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+
+set number 				" line numbers
+set backspace=indent,eol,start		" allow backspace in insert mode
+set history=1000
+set showcmd				" show incomplete commands at the bottom
+set showmode				" show mode at the bottom
+set autoread				" read outside changes
+
+set t_Co=256
+set hidden 				" allow buffers in the background
+
+" syntax, duh
+syntax on
+
+
+" search settings
+set incsearch 		" finds match as search is typed
+set hlsearch  		" highlighs search
+set viminfo='100,fl
+
+
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+
+" ================ Indentation ======================
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+
+set foldmethod=marker
+
+filetype plugin on
+filetype indent on
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+set nowrap "Don't wrap lines
+set linebreak "Wrap lines at convenient points
+
+source ~/.vim/keybindings.vim
+
+" use zenburn theme
+colorscheme zenburn
+
