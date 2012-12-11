@@ -24,7 +24,6 @@ syntax on
 " search settings
 set incsearch 		" finds match as search is typed
 set hlsearch  		" highlighs search
-set viminfo='100,fl
 
 
 " ================ Persistent Undo ==================
