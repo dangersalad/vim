@@ -13,6 +13,6 @@ map <F7> <ESC>:NERDTreeMirror<CR>
 let g:tagbar_usearrows = 1
 
 nnoremap <F6> :TagbarToggle<CR>
-
+nnoremap - :Switch<CR>
 
 set pastetoggle=<F2>
