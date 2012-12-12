@@ -60,3 +60,8 @@ source ~/.vim/keybindings.vim
 " use zenburn theme
 colorscheme zenburn
 
+" supertab settings
+let g:SuperTabDefaultCompletionType = "context"
+
+" sytastic settings
+let g:syntastic_auto_loc_list = 1
