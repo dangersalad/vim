@@ -52,6 +52,3 @@
 [submodule "bundle/zenburn"]
 	path = bundle/zenburn
 	url = https://github.com/jnurmine/Zenburn.git
-[submodule "bundle/switch"]
-	path = bundle/switch
-	url = https://github.com/AndrewRadev/switch.vim.git
