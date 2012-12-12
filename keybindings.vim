@@ -10,5 +10,9 @@ map <C-K> <C-w>k<C-w>_
 map <F5> <ESC>:NERDTreeToggle<CR>
 map <F7> <ESC>:NERDTreeMirror<CR>
 
+let g:tagbar_usearrows = 1
+
+nnoremap <F6> :TagbarToggle<CR>
+
 
 set pastetoggle=<F2>
