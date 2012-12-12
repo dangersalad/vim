@@ -54,4 +54,4 @@
 	url = https://github.com/jnurmine/Zenburn.git
 [submodule "bundle/switch"]
 	path = bundle/switch
-	url = git@github.com:paulbdavis/switch.vim.git
+	url = https://github.com/paulbdavis/switch.vim.git
