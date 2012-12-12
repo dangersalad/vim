@@ -16,3 +16,7 @@ nnoremap <F6> :TagbarToggle<CR>
 nnoremap - :Switch<CR>
 
 set pastetoggle=<F2>
+
+let g:snips_trigger_key="<C-@>"
+
+
