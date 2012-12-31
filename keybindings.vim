@@ -1,10 +1,17 @@
 
 " map commands for window switching
-map <C-H> <C-w>h
-map <C-L> <C-w>l
-map <C-J> <C-w>j<C-w>_
-map <C-K> <C-w>k<C-w>_
+nnoremap <C-H> <C-w>h
+nnoremap <C-L> <C-w>l
+nnoremap <C-J> <C-w>j<C-w>_
+nnoremap <C-K> <C-w>k<C-w>_
 
+" remap <esc> and disable arrows
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " NERDTree Mappings
 map <F5> <ESC>:NERDTreeToggle<CR>
