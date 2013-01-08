@@ -69,3 +69,4 @@ let g:syntastic_auto_loc_list = 1
 
 " highlighting
 highlight MatchParen cterm=bold ctermbg=black ctermfg=green
+autocmd BufRead,BufNewFile *.qml setfiletype qml
