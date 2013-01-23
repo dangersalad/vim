@@ -13,9 +13,22 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" maps for buffer commands
+nnoremap <Leader>0 :b0<CR>
+nnoremap <Leader>1 :b1<CR>
+nnoremap <Leader>2 :b2<CR>
+nnoremap <Leader>3 :b3<CR>
+nnoremap <Leader>4 :b4<CR>
+nnoremap <Leader>5 :b5<CR>
+nnoremap <Leader>6 :b6<CR>
+nnoremap <Leader>7 :b7<CR>
+nnoremap <Leader>8 :b8<CR>
+nnoremap <Leader>9 :b9<CR>
+nnoremap <Leader>- :ls<CR>
+
 " NERDTree Mappings
-map <F5> <ESC>:NERDTreeToggle<CR>
-map <F7> <ESC>:NERDTreeMirror<CR>
+noremap <F5> <ESC>:NERDTreeToggle<CR>
+noremap <F7> <ESC>:NERDTreeMirror<CR>
 
 let g:tagbar_usearrows = 1
 
