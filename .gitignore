@@ -3,3 +3,4 @@
 *.log
 backups/
 .net*
+view/
