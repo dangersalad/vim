@@ -81,4 +81,4 @@ autocmd BufRead,BufNewFile *.less set filetype=less
 
 set foldmethod=manual
 au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinEnter * silent! loadview
