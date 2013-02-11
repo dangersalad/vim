@@ -43,7 +43,6 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 
-set foldmethod=marker
 
 filetype plugin on
 filetype indent on
@@ -77,3 +76,9 @@ let g:syntastic_auto_loc_list = 1
 highlight MatchParen cterm=bold ctermbg=black ctermfg=green
 autocmd BufRead,BufNewFile *.qml set filetype=qml
 autocmd BufRead,BufNewFile *.less set filetype=less
+
+" marker stuff
+
+set foldmethod=manual
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
