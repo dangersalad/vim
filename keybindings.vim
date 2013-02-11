@@ -13,6 +13,9 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" disable EX mode
+nnoremap Q <nop>
+
 " maps for buffer commands
 nnoremap <Leader>0 :b0<CR>
 nnoremap <Leader>1 :b1<CR>
@@ -25,6 +28,7 @@ nnoremap <Leader>7 :b7<CR>
 nnoremap <Leader>8 :b8<CR>
 nnoremap <Leader>9 :b9<CR>
 nnoremap <Leader>- :ls<CR>
+nnoremap <Leader>= :b#<CR>
 
 " NERDTree Mappings
 noremap <F5> <ESC>:NERDTreeToggle<CR>

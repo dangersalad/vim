@@ -8,7 +8,7 @@ call pathogen#helptags()
 
 
 set number 				" line numbers
-set backspace=indent,eol,start		" allow backspace in insert mode
+" set backspace=indent,eol,start		" allow backspace in insert mode
 set history=1000
 set showcmd				" show incomplete commands at the bottom
 set showmode				" show mode at the bottom
