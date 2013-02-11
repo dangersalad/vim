@@ -14,7 +14,6 @@ set showcmd				" show incomplete commands at the bottom
 set showmode				" show mode at the bottom
 set autoread				" read outside changes
 
-set t_Co=256
 set hidden 				" allow buffers in the background
 
 " syntax, duh
@@ -58,7 +57,14 @@ set linebreak "Wrap lines at convenient points
 source ~/.vim/keybindings.vim
 
 " use zenburn theme
-colorscheme zenburn
+" only if running in xterm, looks like shit on a tty
+if $TERM == "linux"
+    echo "tty?"
+    colorscheme vividchalk
+else
+    set t_Co=256
+    colorscheme zenburn
+endif
 
 " supertab settings
 let g:SuperTabDefaultCompletionType = "context"
