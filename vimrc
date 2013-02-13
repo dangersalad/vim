@@ -71,6 +71,31 @@ let g:SuperTabDefaultCompletionType = "context"
 " sytastic settings
 let g:syntastic_auto_loc_list = 1
 
+" cursor config
+if &term =~ "xterm\\|rxvt"
+  " in insert mode
+  let &t_SI = "\<Esc>]12;lightblue\x7"
+  " otherwise
+  let &t_EI = "\<Esc>]12;grey\x7"
+  silent !echo -ne "\033]12;grey\007"
+  " reset cursor when vim exits
+  autocmd VimLeave * silent !echo -ne "\033]112\007"
+  " use \003]12;gray\007 for gnome-terminal
+endif
+
+if &term =~ '^xterm'
+  " 1 or 0 -> blinking block
+  " 2 solid block
+  " 3 -> blinking underscore
+  " 4 solid underscore
+  " Recent versions of xterm (282 or above) also support
+  " 5 -> blinking vertical bar
+  " 6 -> solid vertical bar
+  let &t_SI .= "\<Esc>[6 q"
+  let &t_EI .= "\<Esc>[2 q"
+endif
+
+
 
 " highlighting
 highlight MatchParen cterm=bold ctermbg=black ctermfg=green
