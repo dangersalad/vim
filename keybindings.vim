@@ -16,6 +16,17 @@ inoremap <right> <nop>
 " disable EX mode
 nnoremap Q <nop>
 
+" switching for relative line numbers
+function! NumberToggle()
+    if (&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
 " maps for buffer commands
 nnoremap <Leader>0 :b0<CR>
 nnoremap <Leader>1 :b1<CR>

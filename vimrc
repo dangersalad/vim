@@ -7,7 +7,8 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 
-set number 				" line numbers
+" set number 				" line numbers
+set relativenumber 				" line numbers
 " set backspace=indent,eol,start		" allow backspace in insert mode
 set history=1000
 set showcmd				" show incomplete commands at the bottom
@@ -58,7 +59,6 @@ source ~/.vim/keybindings.vim
 " use zenburn theme
 " only if running in xterm, looks like shit on a tty
 if $TERM == "linux"
-    echo "tty?"
     colorscheme vividchalk
 else
     set t_Co=256
