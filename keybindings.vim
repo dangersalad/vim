@@ -6,12 +6,14 @@ nnoremap <C-J> <C-w>j<C-w>_
 nnoremap <C-K> <C-w>k<C-w>_
 
 " remap <esc> and disable arrows
-inoremap jk <esc>
 inoremap <esc> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+inoremap jk <esc>
+
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
 
 " disable EX mode
 nnoremap Q <nop>
