@@ -41,8 +41,9 @@ nnoremap <Leader>7 :b7<CR>
 nnoremap <Leader>8 :b8<CR>
 nnoremap <Leader>9 :b9<CR>
 " nnoremap <Leader>- :ls<CR>
-nnoremap <Leader>- :CtrlPMixed<CR>
+nnoremap <Leader>- :CtrlPBuffer<CR>
 nnoremap <Leader>= :b#<CR>
+nnoremap <Leader>s :CtrlPMixed<CR>
 
 " NERDTree Mappings
 noremap <F5> <ESC>:NERDTreeToggle<CR>
