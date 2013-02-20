@@ -40,7 +40,8 @@ nnoremap <Leader>6 :b6<CR>
 nnoremap <Leader>7 :b7<CR>
 nnoremap <Leader>8 :b8<CR>
 nnoremap <Leader>9 :b9<CR>
-nnoremap <Leader>- :ls<CR>
+" nnoremap <Leader>- :ls<CR>
+nnoremap <Leader>- :CtrlPMixed<CR>
 nnoremap <Leader>= :b#<CR>
 
 " NERDTree Mappings

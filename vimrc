@@ -24,6 +24,7 @@ syntax on
 " search settings
 set incsearch 		" finds match as search is typed
 set hlsearch  		" highlighs search
+nnoremap <Leader>q :nohlsearch<CR>
 
 
 " ================ Persistent Undo ==================
