@@ -105,7 +105,25 @@ autocmd BufRead,BufNewFile *.qml set filetype=qml
 autocmd BufRead,BufNewFile *.less set filetype=less
 
 " marker stuff
-
 set foldmethod=manual
 au BufWinLeave * mkview
 au BufWinEnter * silent! loadview
+
+"highlight for status bar
+hi User1 ctermbg=235 ctermfg=red    guibg=#262626 guifg=red
+hi User2 ctermbg=235 ctermfg=blue   guibg=#262626 guifg=blue
+hi User3 ctermbg=235 ctermfg=green  guibg=#262626 guifg=green
+hi User4 ctermbg=235 ctermfg=yellow  guibg=#262626 guifg=yellow
+hi User5 ctermbg=235 ctermfg=lightgray  guibg=#262626 guifg=lightgray
+
+" stats bar
+set statusline=%3*%t
+set statusline+=%1*%h%m%r%w
+set statusline+=%=
+set statusline+=%5*%l/%L
+set statusline+=%1*%y%4*[%{strlen(&fenc)?&fenc:&enc}, " encoding
+set statusline+=%{&fileformat}]              " file format
+set statusline+=%2*
+set statusline+=%{fugitive#statusline()}
+set laststatus=2
+
