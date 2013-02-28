@@ -70,6 +70,3 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/indent-line"]
-	path = bundle/indent-line
-	url = https://github.com/Yggdroot/indentLine.git
