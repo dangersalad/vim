@@ -73,10 +73,6 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map={ 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 
-" indentLine settings
-let g:indentLine_color_term = 236
-let g:indentLine_color_gui = '#A4E57E'
-let g:indentLine_char = '┃'
 
 " cursor config
 if &term =~ "xterm\\|rxvt"
