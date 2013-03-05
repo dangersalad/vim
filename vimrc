@@ -107,7 +107,7 @@ autocmd BufRead,BufNewFile *.less set filetype=less
 
 " java specific
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-set no_java_maps
+let no_java_maps=1
 
 " marker stuff
 set foldmethod=manual
