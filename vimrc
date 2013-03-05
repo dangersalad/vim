@@ -105,6 +105,10 @@ highlight MatchParen cterm=bold ctermbg=black ctermfg=green
 autocmd BufRead,BufNewFile *.qml set filetype=qml
 autocmd BufRead,BufNewFile *.less set filetype=less
 
+" java specific
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+set no_java_maps
+
 " marker stuff
 set foldmethod=manual
 au BufWinLeave * mkview
