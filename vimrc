@@ -107,6 +107,8 @@ autocmd BufRead,BufNewFile *.less set filetype=less
 
 " java specific
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java javacomplete#AddSourcePath("$(getcwd)/src")
+autocmd Filetype java javacomplete#AddClassPath("$(getcwd)/target")
 let no_java_maps=1
 
 " marker stuff
