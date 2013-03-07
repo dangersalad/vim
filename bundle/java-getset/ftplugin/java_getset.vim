@@ -274,7 +274,7 @@ if exists("b:javagetset_getterTemplate")
   let s:javagetset_getterTemplate = b:javagetset_getterTemplate
 else  
   let s:javagetset_getterTemplate = 
-    \ "\n" .
+\"\n" .
     \ "/**\n" .
     \ " * Get %varname%.\n" .
     \ " *\n" .
@@ -290,7 +290,7 @@ if exists("b:javagetset_getterArrayTemplate")
   let s:javagetset_getterArrayTemplate = b:javagetset_getterArrayTemplate
 else  
   let s:javagetset_getterArrayTemplate =
-    \ "\n" .
+\"\n" .
     \ "/**\n" .
     \ " * Get %varname%.\n" .
     \ " *\n" .
@@ -318,7 +318,7 @@ if exists("b:javagetset_setterTemplate")
   let s:javagetset_setterTemplate = b:javagetset_setterTemplate
 else  
   let s:javagetset_setterTemplate = 
-  \ "\n" .
+\"\n" .
   \ "/**\n" .
   \ " * Set %varname%.\n" .
   \ " *\n" .
@@ -334,7 +334,7 @@ if exists("b:javagetset_setterArrayTemplate")
   let s:javagetset_setterArrayTemplate = b:javagetset_setterArrayTemplate
 else  
   let s:javagetset_setterArrayTemplate =
-  \ "\n" .
+\"\n" .
   \ "/**\n" .
   \ " * Set %varname%.\n" .
   \ " *\n" .
