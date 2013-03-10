@@ -73,6 +73,8 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map={ 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 
+" java
+let no_java_maps=1
 
 " cursor config
 if &term =~ "xterm\\|rxvt"
