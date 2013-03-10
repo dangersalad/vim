@@ -105,14 +105,6 @@ highlight MatchParen cterm=bold ctermbg=black ctermfg=green
 autocmd BufRead,BufNewFile *.qml set filetype=qml
 autocmd BufRead,BufNewFile *.less set filetype=less
 
-" java specific
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-let classPath = getcwd() . "/target"
-let srcPath = getcwd() . "/src"
-autocmd Filetype java call javacomplete#AddSourcePath(srcPath)
-autocmd Filetype java call javacomplete#AddClassPath(classPath)
-let no_java_maps=1
-
 " marker stuff
 set foldmethod=manual
 au BufWinLeave * mkview
