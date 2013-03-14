@@ -4,6 +4,8 @@
 
 After cloning run
 
+    $ cd ~/.vim
     $ git submodule init
     $ git submodule update
-    $ ln -s ~/.vim/vimrc ~/.vimrc
+    $ cd ~/
+    $ ln -s .vim/vimrc .vimrc
