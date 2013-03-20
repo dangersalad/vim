@@ -110,6 +110,13 @@ highlight MatchParen cterm=bold ctermbg=black ctermfg=green
 autocmd BufRead,BufNewFile *.qml set filetype=qml
 autocmd BufRead,BufNewFile *.less set filetype=less
 
+" ctrl p ignore
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.?(git|hg|svn|dojo|dijit|dojox|util)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+
+
 " marker stuff
 set foldmethod=manual
 au BufWinLeave * mkview
