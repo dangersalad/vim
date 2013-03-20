@@ -49,10 +49,15 @@ set expandtab
 filetype plugin on
 filetype indent on
 
+" a function to run things silently
+command! -nargs=1 Silent
+\ | execute ':silent !'.<q-args>
+\ | execute ':redraw!'
+
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-set nowrap "Don't wrap lines
+" set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
 
 source ~/.vim/keybindings.vim
@@ -119,7 +124,7 @@ let g:ctrlp_custom_ignore = {
 
 " marker stuff
 set foldmethod=manual
-au BufWinLeave * mkview
+au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 "highlight for status bar

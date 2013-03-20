@@ -2,8 +2,14 @@
 " map commands for window switching
 nnoremap <C-H> <C-w>h
 nnoremap <C-L> <C-w>l
-nnoremap <C-J> <C-w>j<C-w>_
-nnoremap <C-K> <C-w>k<C-w>_
+nnoremap <C-J> <C-w>j
+nnoremap <C-K> <C-w>k
+
+nnoremap <leader>h <C-w>5<
+nnoremap <leader>l <C-w>5>
+nnoremap <leader>j <C-w>5-
+nnoremap <leader>k <C-w>5+
+
 
 " remap <esc> and disable arrows
 inoremap <esc> <nop>
