@@ -73,3 +73,6 @@
 [submodule "bundle/php-html-indent"]
 	path = bundle/php-html-indent
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim.git
