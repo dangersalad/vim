@@ -73,6 +73,7 @@ endif
 
 " supertab settings
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabNoCompleteAfter = ['^', ',', '"', '\s', "'"]
 
 " sytastic settings
 let g:syntastic_auto_loc_list = 1
