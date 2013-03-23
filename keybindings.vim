@@ -24,6 +24,10 @@ endfor
 " disable EX mode
 nnoremap Q <nop>
 
+" map j and k to move by character
+nnoremap j gj
+nnoremap k gk
+
 " switching for relative line numbers
 function! NumberToggle()
     if (&relativenumber == 1)
