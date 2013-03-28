@@ -3,37 +3,39 @@ set nocompatible
 
 " initialize pathogen
 runtime pathogen/autoload/pathogen.vim
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 
 
-" set number 				" line numbers
-set relativenumber 				" line numbers
-set backspace=indent,eol,start		" allow backspace in insert mode
+" set number                 " line numbers
+set relativenumber                 " line numbers
+set backspace=indent,eol,start        " allow backspace in insert mode
 set history=1000
-set showcmd				" show incomplete commands at the bottom
-set showmode				" show mode at the bottom
-set autoread				" read outside changes
+set showcmd                " show incomplete commands at the bottom
+set showmode                " show mode at the bottom
+set autoread                " read outside changes
 
-set hidden 				" allow buffers in the background
+set hidden                 " allow buffers in the background
 
+" folders
+silent execute '!mkdir -p $HOME/.vim/tmp/{backup,swap,view,undo}'
+set backupdir=$HOME/.vim/tmp/backup/
+set backup
+set directory=$HOME/.vim/tmp/swap/
+set viewdir=$HOME/.vim/tmp/view/
+set undodir=$HOME/.vim/tmp/undo/
+" store undo files, undo edits after deleting a buffer
+set undofile
+set viminfo='50,n$HOME/.vim/tmp/viminfo
 " syntax, duh
 syntax on
 
 
 " search settings
-set incsearch 		" finds match as search is typed
-set hlsearch  		" highlighs search
+set incsearch         " finds match as search is typed
+set hlsearch          " highlighs search
 nnoremap <Leader>q :nohlsearch<CR>
 
-
-" ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
-set undofile
 
 " ================ Indentation ======================
 
@@ -60,10 +62,10 @@ set list listchars=tab:▶\ ,trail:·,extends:»,precedes:«
 " set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
 set showbreak=↪
-set textwidth=79
-set wrapmargin=80
+set textwidth=119
+set wrapmargin=120
 set formatoptions=qrnl
-set colorcolumn=80
+set colorcolumn=120
 set splitright splitbelow
 set shortmess+=afilmnrxoOtTI
 
