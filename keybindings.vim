@@ -24,9 +24,6 @@ endfor
 " disable EX mode
 nnoremap Q <nop>
 
-" map j and k to move by character
-nnoremap j gj
-nnoremap k gk
 
 " switching for relative line numbers
 function! NumberToggle()
@@ -69,3 +66,30 @@ set pastetoggle=<F2>
 let g:snips_trigger_key="<C-@>"
 
 
+" No repetitive HJKL {
+let g:cursor_moving = 0
+
+function! TrapMovementKeys(key)
+    augroup CursorMoving
+        autocmd!
+        autocmd CursorMoved * let g:cursor_moving += 1
+    augroup END
+    if g:cursor_moving <= 5
+        return a:key
+    else
+        return ''
+    endif
+endfunction
+
+nnoremap <expr> h TrapMovementKeys('h')
+nnoremap <expr> j TrapMovementKeys('j')
+nnoremap <expr> k TrapMovementKeys('k')
+nnoremap <expr> l TrapMovementKeys('l')
+
+augroup CursorMovingOff
+    autocmd!
+    autocmd CursorHold * let g:cursor_moving = 0
+augroup END
+" map j and k to move by character
+" nnoremap j gj
+" nnoremap k gk

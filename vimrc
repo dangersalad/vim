@@ -55,10 +55,17 @@ command! -nargs=1 Silent
 \ | execute ':redraw!'
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:▶\ ,trail:·,eol:¬,extends:»,precedes:«
 
 " set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
+set showbreak=↪
+set textwidth=79
+set wrapmargin=80
+set formatoptions=qrnl
+set colorcolumn=80
+set splitright splitbelow
+set shortmess+=afilmnrxoOtTI
 
 source ~/.vim/keybindings.vim
 
