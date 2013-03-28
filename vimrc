@@ -55,7 +55,7 @@ command! -nargs=1 Silent
 \ | execute ':redraw!'
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:▶\ ,trail:·,eol:¬,extends:»,precedes:«
+set list listchars=tab:▶\ ,trail:·,extends:»,precedes:«
 
 " set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
