@@ -71,14 +71,22 @@ let g:cursor_moving = 0
 set updatetime=2000
 
 function! TrapMovementKeys(key)
-    augroup CursorMoving
-        autocmd!
-        autocmd CursorMoved * let g:cursor_moving += 1
-    augroup END
-    if g:cursor_moving <= 10
+    " augroup CursorMoving
+    "     autocmd!
+    "     autocmd CursorMoved * let g:cursor_moving += 1
+    " augroup END
+    let g:cursor_moving += 1
+    if g:cursor_moving <= 7
         return a:key
     else
-        return ''
+        let nerdTest = matchstr(bufname('%'), 'NERD_tree')
+        let tagbarTest = matchstr(bufname('%'), '__Tagbar__')
+        if empty(nerdTest) && empty(tagbarTest)
+            return ''
+        else
+            let g:cursor_moving = 0
+            return a:key
+        endif
     endif
 endfunction
 
