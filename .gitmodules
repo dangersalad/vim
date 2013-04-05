@@ -24,7 +24,7 @@
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets.git
+	url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
