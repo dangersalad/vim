@@ -77,6 +77,8 @@ if $TERM == "linux"
     colorscheme vividchalk
 else
     set t_Co=256
+    let g:zenburn_high_Contrast=1
+    let g:zenburn_force_dark_Background = 1
     colorscheme zenburn
 endif
 
