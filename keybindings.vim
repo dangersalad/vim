@@ -12,14 +12,15 @@ nnoremap <leader>k <C-w>5+
 
 
 " remap <esc> and disable arrows
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 inoremap jk <esc>
 
-for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-    exe prefix . "noremap " . key . " <Nop>"
-  endfor
-endfor
+" disable so other people don;t get pissed off
+" for prefix in ['i', 'n', 'v']
+"   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+"     exe prefix . "noremap " . key . " <Nop>"
+"   endfor
+" endfor
 
 " disable EX mode
 nnoremap Q <nop>
@@ -63,7 +64,11 @@ nnoremap <F6> :TagbarToggle<CR>
 
 set pastetoggle=<F2>
 
-let g:snips_trigger_key="<C-@>"
+" this is depreciated
+" let g:snips_trigger_key="<C-@>"
+
+imap <C-@> <Plug>snipMateNextOrTrigger
+smap <C-@> <Plug>snipMateNextOrTrigger
 
 
 " No repetitive HJKL
@@ -90,10 +95,11 @@ function! TrapMovementKeys(key)
     endif
 endfunction
 
-nnoremap <expr> h TrapMovementKeys('h')
-nnoremap <expr> j TrapMovementKeys('j')
-nnoremap <expr> k TrapMovementKeys('k')
-nnoremap <expr> l TrapMovementKeys('l')
+" disable this so other people don't get pissed off
+" nnoremap <expr> h TrapMovementKeys('h')
+" nnoremap <expr> j TrapMovementKeys('j')
+" nnoremap <expr> k TrapMovementKeys('k')
+" nnoremap <expr> l TrapMovementKeys('l')
 
 augroup CursorMovingOff
     autocmd!
