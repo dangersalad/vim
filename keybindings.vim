@@ -12,15 +12,7 @@ nnoremap <leader>k <C-w>5+
 
 
 " remap <esc> and disable arrows
-" inoremap <esc> <nop>
 inoremap jk <esc>
-
-" disable so other people don;t get pissed off
-" for prefix in ['i', 'n', 'v']
-"   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-"     exe prefix . "noremap " . key . " <Nop>"
-"   endfor
-" endfor
 
 " disable EX mode
 nnoremap Q <nop>
@@ -29,7 +21,7 @@ nnoremap Q <nop>
 " switching for relative line numbers
 function! NumberToggle()
     if (&relativenumber == 1)
-        set number
+        set norelativenumber
     else
         set relativenumber
     endif
@@ -60,51 +52,10 @@ noremap <F7> <ESC>:NERDTreeMirror<CR>
 let g:tagbar_usearrows = 1
 
 nnoremap <F6> :TagbarToggle<CR>
-" nnoremap - :Switch<CR>
 
 set pastetoggle=<F2>
 
-" this is depreciated
-" let g:snips_trigger_key="<C-@>"
 
 imap <C-@> <Plug>snipMateNextOrTrigger
 smap <C-@> <Plug>snipMateNextOrTrigger
 
-
-" No repetitive HJKL
-let g:cursor_moving = 0
-set updatetime=2000
-
-function! TrapMovementKeys(key)
-    " augroup CursorMoving
-    "     autocmd!
-    "     autocmd CursorMoved * let g:cursor_moving += 1
-    " augroup END
-    let g:cursor_moving += 1
-    if g:cursor_moving <= 7
-        return a:key
-    else
-        let nerdTest = matchstr(bufname('%'), 'NERD_tree')
-        let tagbarTest = matchstr(bufname('%'), '__Tagbar__')
-        if empty(nerdTest) && empty(tagbarTest)
-            return ''
-        else
-            let g:cursor_moving = 0
-            return a:key
-        endif
-    endif
-endfunction
-
-" disable this so other people don't get pissed off
-" nnoremap <expr> h TrapMovementKeys('h')
-" nnoremap <expr> j TrapMovementKeys('j')
-" nnoremap <expr> k TrapMovementKeys('k')
-" nnoremap <expr> l TrapMovementKeys('l')
-
-augroup CursorMovingOff
-    autocmd!
-    autocmd CursorHold * let g:cursor_moving = 0
-augroup END
-" map j and k to move by character
-" nnoremap j gj
-" nnoremap k gk

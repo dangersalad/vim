@@ -8,6 +8,7 @@ call pathogen#helptags()
 
 
 " set number                 " line numbers
+set number
 set relativenumber                 " line numbers
 set backspace=indent,eol,start        " allow backspace in insert mode
 set history=1000
