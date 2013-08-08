@@ -87,25 +87,18 @@ endif
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabNoCompleteAfter = ['^', ',', '"', '\s', "'"]
 
-" completion functions
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
-" sytastic settings
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_mode_map={ 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
-
 " java
 let no_java_maps=1
 
 " cursor config
 if &term =~ "xterm\\|rxvt"
   " in insert mode
-  " let &t_SI = "\<Esc>]12;lightblue\x7"
+  let &t_SI = "\<Esc>]12;lightblue\x7"
   " otherwise
-  " let &t_EI = "\<Esc>]12;grey\x7"
-  " silent !echo -ne "\033]12;grey\007"
+  let &t_EI = "\<Esc>]12;grey\x7"
+  silent !echo -ne "\033]12;grey\007"
   " reset cursor when vim exits
-  " autocmd VimLeave * silent !echo -ne "\033]112\007"
+  autocmd VimLeave * silent !echo -ne "\033]112\007"
   " use \003]12;gray\007 for gnome-terminal
 endif
 
@@ -117,8 +110,8 @@ if &term =~ '^xterm'
   " Recent versions of xterm (282 or above) also support
   " 5 -> blinking vertical bar
   " 6 -> solid vertical bar
-  " let &t_SI .= "\<Esc>[6 q"
-  " let &t_EI .= "\<Esc>[2 q"
+  let &t_SI .= "\<Esc>[6 q"
+  let &t_EI .= "\<Esc>[2 q"
 endif
 
 " closetag plugin for html, xml, etc
@@ -133,13 +126,6 @@ autocmd FileType php nnoremap <Leader>p :call PhpDoc()<CR>
 highlight MatchParen cterm=bold ctermbg=black ctermfg=green
 autocmd BufRead,BufNewFile *.qml set filetype=qml
 autocmd BufRead,BufNewFile *.less set filetype=less
-
-" ctrl p ignore
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.?(git|hg|svn|dojo|dijit|dojox|util)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-
 
 " marker stuff
 set foldmethod=manual
