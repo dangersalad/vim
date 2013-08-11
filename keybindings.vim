@@ -17,6 +17,9 @@ inoremap jk <esc>
 " disable EX mode
 nnoremap Q <nop>
 
+nnoremap <leader>gf :Git fetch<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gu :Git push<cr>
 
 " switching for relative line numbers
 function! NumberToggle()
