@@ -12,9 +12,9 @@ nnoremap <leader>l <C-w>5>
 nnoremap <leader>j <C-w>5-
 nnoremap <leader>k <C-w>5+
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>ek :vsplit $HOME/.vim/keybindings.vim<cr>
+nnoremap <leader>ek :e $HOME/.vim/keybindings.vim<cr>
 
 nnoremap H ^
 nnoremap L $
@@ -45,6 +45,10 @@ set pastetoggle=<F2>
 " undotree mapping
 nnoremap U :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
+
+" special buffer delete
+nnoremap <leader>x :Bdelete<cr>
+nnoremap <leader>X :bdelete<cr>
 
 " a subset of unimpaired, with modifications
 nnoremap [q :cprevious<cr>
