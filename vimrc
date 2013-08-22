@@ -54,6 +54,7 @@ set splitright splitbelow
 " set shortmess+=afilmnrxoOtTI
 set shortmess+=I
 
+set guifont=DejaVu\ Sans\ Mono\ 8
 " }}}
 
 " ================ Indentation ====================== {{{
