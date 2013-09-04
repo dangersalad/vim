@@ -5,6 +5,7 @@ source ~/.vim/neobundle.vim
 
 source ~/.vim/keybindings.vim
 
+
 " ============ Basic Settings ================ {{{
 
 " set number                 " line numbers
@@ -33,6 +34,10 @@ set viminfo='50,n$HOME/.vim/tmp/viminfo
 " syntax, duh
 syntax on
 
+set ttimeout
+set ttimeoutlen=50
+
+set updatetime=500
 
 " search settings
 set incsearch         " finds match as search is typed
