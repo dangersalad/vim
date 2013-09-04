@@ -30,3 +30,5 @@ NeoBundle "scrooloose/syntastic"
 NeoBundle "bling/vim-airline"
 NeoBundle "pangloss/vim-javascript"
 NeoBundle "groenewege/vim-less"
+
+NeoBundleCheck
