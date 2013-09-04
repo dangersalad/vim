@@ -15,9 +15,11 @@ set number
 set relativenumber                 " line numbers
 set backspace=indent,eol,start        " allow backspace in insert mode
 set history=1000
-set showcmd                " show incomplete commands at the bottom
-set showmode                " show mode at the bottom
+set noshowcmd                " show incomplete commands at the bottom
+set noshowmode                " show mode at the bottom
 set autoread                " read outside changes
+
+set scrolloff=10
 
 set hidden                 " allow buffers in the background
 
@@ -144,6 +146,11 @@ let g:SuperTabNoCompleteAfter = ['^', ',', '"', '\s', "'"]
 " java
 let no_java_maps=1
 
+" airline
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='jellybeans'
+
 " closetag plugin for html, xml, etc
 augroup close_tag_plugin
     autocmd!
@@ -198,9 +205,9 @@ augroup END
 " }}}
 
 " status bar {{{
-set statusline=%5*(%n)\ %3*%.40f\ 
-set statusline+=%1*%h%m%r%w\ 
-set statusline+=%{SyntasticStatuslineFlag()}\ 
+set statusline=%5*(%n)\ %3*%.40f
+set statusline+=\ %1*%h%m%r%w
+set statusline+=\ %{SyntasticStatuslineFlag()}
 set statusline+=%=
 set statusline+=%5*%4l/%-5L
 set statusline+=%1*%y%4*[%{strlen(&fenc)?&fenc:&enc}, " encoding
