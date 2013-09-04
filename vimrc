@@ -1,10 +1,7 @@
 " use Vim settings only
 set nocompatible
 
-" initialize pathogen
-runtime pathogen/autoload/pathogen.vim
-call pathogen#incubate()
-call pathogen#helptags()
+source ~/.vim/neobundle.vim
 
 source ~/.vim/keybindings.vim
 
