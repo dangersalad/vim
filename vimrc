@@ -55,6 +55,9 @@ set splitright splitbelow
 set shortmess+=I
 
 set guifont=DejaVu\ Sans\ Mono\ 8
+
+autocmd BufWinLeave * silent! mkview
+autocmd BufWinEnter * silent! loadview
 " }}}
 
 " ================ Indentation ====================== {{{
@@ -148,6 +151,10 @@ augroup close_tag_plugin
     autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/closetag/plugin/closetag.vim
 augroup END
 
+" syntastic settings
+let g:syntastic_always_populate_loc_list=1
+
+
 
 " indentLine settings
 let g:indentLine_color_term = 237
@@ -191,8 +198,9 @@ augroup END
 " }}}
 
 " status bar {{{
-set statusline=%5*(%n)\ %3*%.40f
-set statusline+=%1*%h%m%r%w
+set statusline=%5*(%n)\ %3*%.40f\ 
+set statusline+=%1*%h%m%r%w\ 
+set statusline+=%{SyntasticStatuslineFlag()}\ 
 set statusline+=%=
 set statusline+=%5*%4l/%-5L
 set statusline+=%1*%y%4*[%{strlen(&fenc)?&fenc:&enc}, " encoding

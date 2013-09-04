@@ -55,6 +55,10 @@ nnoremap [q :cprevious<cr>
 nnoremap ]q :cnext<cr>
 nnoremap [Q :cfirst<cr>
 nnoremap ]Q :clast<cr>
+nnoremap [l :lprevious<cr>
+nnoremap ]l :lnext<cr>
+nnoremap [L :lfirst<cr>
+nnoremap ]L :llast<cr>
 nnoremap [b :bprevious<cr>
 nnoremap ]b :bnext<cr>
 nnoremap [B :bfirst<cr>
