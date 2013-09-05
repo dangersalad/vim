@@ -40,7 +40,8 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
+nnoremap <F2> :set invpaste<CR>
 
 " undotree mapping
 nnoremap U :UndotreeToggle<CR>
@@ -67,3 +68,9 @@ nnoremap [t :tabprevious<cr>
 nnoremap ]t :tabnext<cr>
 nnoremap [T :tabfirst<cr>
 nnoremap ]T :tablast<cr>
+
+" Unite.vim mappings
+let g:unite_source_file_rec_ignore_pattern = '\.git/.*'
+nnoremap <leader>f :Unite -start-insert file_rec/async<cr>
+nnoremap <leader>b :Unite -start-insert buffer<cr>
+nnoremap <leader>s :Unite grep:.<cr>

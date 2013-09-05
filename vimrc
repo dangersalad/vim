@@ -54,6 +54,13 @@ set splitright splitbelow
 set shortmess+=I
 
 set guifont=DejaVu\ Sans\ Mono\ 8
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=l
+set guioptions-=R
+set guioptions-=L
+set guioptions-=b
 
 autocmd BufWinLeave * silent! mkview
 autocmd BufWinEnter * silent! loadview
