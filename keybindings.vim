@@ -70,7 +70,7 @@ nnoremap [T :tabfirst<cr>
 nnoremap ]T :tablast<cr>
 
 " Unite.vim mappings
-let g:unite_source_file_rec_ignore_pattern = '\.git/.*'
 nnoremap <leader>f :Unite -start-insert file_rec/async<cr>
+nnoremap <leader>F :Unite file<cr>
 nnoremap <leader>b :Unite -start-insert buffer<cr>
 nnoremap <leader>s :Unite grep:.<cr>
