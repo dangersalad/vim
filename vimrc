@@ -34,11 +34,6 @@ set viminfo='50,n$HOME/.vim/tmp/viminfo
 " syntax, duh
 syntax on
 
-set ttimeout
-set ttimeoutlen=50
-
-set updatetime=500
-
 " search settings
 set incsearch         " finds match as search is typed
 set hlsearch          " highlighs search
@@ -151,7 +146,7 @@ let no_java_maps=1
 " airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='jellybeans'
+let g:airline_theme='zenburn'
 
 " closetag plugin for html, xml, etc
 augroup close_tag_plugin
