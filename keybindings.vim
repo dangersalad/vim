@@ -70,7 +70,13 @@ nnoremap [T :tabfirst<cr>
 nnoremap ]T :tablast<cr>
 
 " Unite.vim mappings
-nnoremap <leader>f :Unite -start-insert file_rec/async<cr>
+let g:unite_source_file_rec_max_cache_files=65535
+call unite#custom#source('file_rec/async', 'ignore_pattern', '.*\(node_modules\|\.git\)/.*$')
+nnoremap <leader>fs :Unite -start-insert -default-action=split file_rec/async<cr>
+nnoremap <leader>fv :Unite -start-insert -default-action=vsplit file_rec/async<cr>
+nnoremap <leader>fc :Unite -start-insert file_rec/async<cr>
 nnoremap <leader>F :Unite file<cr>
-nnoremap <leader>b :Unite -start-insert buffer<cr>
+nnoremap <leader>bs :Unite -start-insert -default-action=split buffer<cr>
+nnoremap <leader>bv :Unite -start-insert -default-action=vsplit buffer<cr>
+nnoremap <leader>bc :Unite -start-insert buffer<cr>
 nnoremap <leader>s :Unite grep:.<cr>
