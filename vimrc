@@ -39,7 +39,7 @@ set incsearch         " finds match as search is typed
 set hlsearch          " highlighs search
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:▶\ ,trail:·,extends:»,precedes:«
+set list listchars=tab:→\ ,trail:·,extends:»,precedes:«
 
 " set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
