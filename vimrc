@@ -5,7 +5,6 @@ source ~/.vim/neobundle.vim
 
 source ~/.vim/keybindings.vim
 
-
 " ============ Basic Settings ================ {{{
 
 " set number                 " line numbers
@@ -221,6 +220,10 @@ if $TERM == "linux"
     colorscheme vividchalk
 else
     set t_Co=256
+    " if tmux is running, fix the background colors
+    if !empty($TMUX)
+        set t_ut=
+    endif
     let g:zenburn_high_Contrast=1
     let g:zenburn_force_dark_Background = 1
     colorscheme zenburn
