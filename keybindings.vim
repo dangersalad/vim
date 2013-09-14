@@ -40,8 +40,8 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
-" set pastetoggle=<F2>
-nnoremap <F2> :set invpaste<CR>
+set pastetoggle=<F2>
+" nnoremap <F2> :set invpaste<CR>
 
 " undotree mapping
 nnoremap U :UndotreeToggle<CR>
