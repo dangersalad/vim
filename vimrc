@@ -43,10 +43,9 @@ set list listchars=tab:→\ ,trail:·,extends:»,precedes:«
 " set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
 set showbreak=↪
-set textwidth=119
-set wrapmargin=120
-set formatoptions=qrnl
-set colorcolumn=120
+set textwidth=79
+set formatoptions=qcrnl
+" set colorcolumn=80
 set splitright splitbelow
 
 " set shortmess+=afilmnrxoOtTI
