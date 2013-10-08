@@ -17,6 +17,7 @@ NeoBundle 'Shougo/vimproc', {
             \ }
 
 NeoBundle "Shougo/unite.vim"
+NeoBundle "tsukkee/unite-help"
 NeoBundle "tpope/vim-fugitive"
 NeoBundle "tpope/vim-surround"
 NeoBundle "tpope/vim-repeat"

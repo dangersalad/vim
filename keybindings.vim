@@ -80,3 +80,6 @@ nnoremap <leader>bs :Unite -start-insert -default-action=split buffer<cr>
 nnoremap <leader>bv :Unite -start-insert -default-action=vsplit buffer<cr>
 nnoremap <leader>bc :Unite -start-insert buffer<cr>
 nnoremap <leader>s :Unite grep:.<cr>
+
+" use unite to search help
+nnoremap <F1> :Unite -start-insert help<cr>
