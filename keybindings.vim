@@ -43,10 +43,6 @@ nnoremap <C-n> :call NumberToggle()<cr>
 set pastetoggle=<F2>
 " nnoremap <F2> :set invpaste<CR>
 
-" undotree mapping
-nnoremap U :UndotreeToggle<CR>
-let g:undotree_SetFocusWhenToggle = 1
-
 " special buffer delete
 nnoremap <leader>x :Bdelete<cr>
 nnoremap <leader>X :bdelete<cr>
