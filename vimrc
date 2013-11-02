@@ -53,6 +53,7 @@ set shortmess+=I
 
 set guifont=DejaVu\ Sans\ Mono\ 8
 set guioptions=aci
+set guiheadroom=0
 
 " autocmd BufWinLeave * silent! mkview
 " autocmd BufWinEnter * silent! loadview
@@ -175,6 +176,10 @@ augroup highlighting
     autocmd ColorScheme * hi MatchParen cterm=bold ctermbg=black ctermfg=green
     " highlighing for SignColumn
     autocmd ColorScheme * hi SignColumn ctermbg=235
+    autocmd ColorScheme * hi CursorLineNr ctermfg=green
+    autocmd ColorScheme * hi TabLine ctermfg=240 ctermbg=235
+    autocmd ColorScheme * hi TabLineFill ctermbg=235
+    autocmd ColorScheme * hi TabLineSel ctermfg=green ctermbg=233
     autocmd ColorScheme * hi GitGutterAdd ctermbg=235 ctermfg=green
     autocmd ColorScheme * hi GitGutterChange ctermbg=235 ctermfg=yellow
     autocmd ColorScheme * hi GitGutterChangeDelete ctermbg=235 ctermfg=red

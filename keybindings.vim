@@ -1,12 +1,6 @@
 
 nnoremap <Leader>q :nohlsearch<CR>
 
-" map commands for window switching
-nnoremap <C-H> <C-w>h
-nnoremap <C-L> <C-w>l
-nnoremap <C-J> <C-w>j
-nnoremap <C-K> <C-w>k
-
 nnoremap <leader>h <C-w>5<
 nnoremap <leader>l <C-w>5>
 nnoremap <leader>j <C-w>5-
@@ -16,8 +10,6 @@ nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ek :e $HOME/.vim/keybindings.vim<cr>
 
-nnoremap H ^
-nnoremap L $
 " remap <esc> and disable arrows
 inoremap jk <esc>
 
