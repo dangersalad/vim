@@ -133,9 +133,6 @@ command! -complete=shellcmd -nargs=+ Shell call g:DSExecuteInShell(<q-args>)
 
 " =========== Plugin Config ================= {{{
 
-
-let g:startify_list_order = ['files', 'dir', 'bookmarks', 'sessions']
-
 " supertab settings
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabNoCompleteAfter = ['^', ',', '"', '\s', "'"]
