@@ -55,6 +55,10 @@ set guifont=DejaVu\ Sans\ Mono\ 8
 set guioptions=aci
 set guiheadroom=0
 
+if filereadable(getcwd() . "/.git/tags")
+    let &tags=getcwd()."/.git/tags"
+endif
+
 " autocmd BufWinLeave * silent! mkview
 " autocmd BufWinEnter * silent! loadview
 " }}}
