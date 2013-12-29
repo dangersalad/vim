@@ -13,7 +13,7 @@ set relativenumber                 " line numbers
 set backspace=indent,eol,start        " allow backspace in insert mode
 set history=1000
 set noshowcmd                " show incomplete commands at the bottom
-set noshowmode                " show mode at the bottom
+set showmode                " show mode at the bottom
 set autoread                " read outside changes
 
 set scrolloff=10
@@ -145,9 +145,26 @@ let g:SuperTabNoCompleteAfter = ['^', ',', '"', '\s', "'"]
 let no_java_maps=1
 
 " airline
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline_left_alt_sep = '|'
+let g:airline_right_alt_sep = '|'
+let g:airline_symbols.linenr = '¶'
 let g:airline_theme='zenburn'
+let g:airline#extensions#tabline#enabled = 1
+
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create(['branch'])
+    let g:airline_section_b = airline#section#create_left(['hunks'])
+    let g:airline_section_c = airline#section#create(['file'])
+    let g:airline_section_x = airline#section#create(['filetype'])
+    let g:airline_section_y = airline#section#create(['ffenc'])
+    let g:airline_section_z = airline#section#create_right(['%P', '¶ %l:%c'])
+endfunction
+autocmd VimEnter * call AirlineInit()
 
 " closetag plugin for html, xml, etc
 augroup close_tag_plugin
@@ -167,7 +184,10 @@ let g:indentLine_color_gui = '#3a3a3a'
 let g:indentLine_char = '│'
 
 " git gutter settings
-let g:gitgutter_sign_column_always = 1
+" let g:gitgutter_sign_column_always = 1
+
+" signify settings
+let g:signify_vcs_list = [ 'git', 'hg', 'svn' ]
 
 " }}}
 
@@ -181,10 +201,13 @@ augroup highlighting
     autocmd ColorScheme * hi TabLine ctermfg=240 ctermbg=235
     autocmd ColorScheme * hi TabLineFill ctermbg=235
     autocmd ColorScheme * hi TabLineSel ctermfg=green ctermbg=233
-    autocmd ColorScheme * hi GitGutterAdd ctermbg=235 ctermfg=green
-    autocmd ColorScheme * hi GitGutterChange ctermbg=235 ctermfg=yellow
-    autocmd ColorScheme * hi GitGutterChangeDelete ctermbg=235 ctermfg=red
-    autocmd ColorScheme * hi GitGutterDelete ctermbg=235 ctermfg=red
+    " autocmd ColorScheme * hi GitGutterAdd ctermbg=235 ctermfg=green
+    " autocmd ColorScheme * hi GitGutterChange ctermbg=235 ctermfg=yellow
+    " autocmd ColorScheme * hi GitGutterChangeDelete ctermbg=235 ctermfg=red
+    " autocmd ColorScheme * hi GitGutterDelete ctermbg=235 ctermfg=red
+    autocmd ColorScheme * hi SignifySignAdd ctermbg=235 ctermfg=green
+    autocmd ColorScheme * hi SignifySignCHange ctermbg=235 ctermfg=yellow
+    autocmd ColorScheme * hi SignifySignDelete ctermbg=235 ctermfg=red
 
     "highlight for status bar
     autocmd ColorScheme * hi User1 ctermbg=235 ctermfg=red    guibg=#262626 guifg=red
