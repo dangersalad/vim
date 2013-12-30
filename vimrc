@@ -13,8 +13,9 @@ set relativenumber                 " line numbers
 set backspace=indent,eol,start        " allow backspace in insert mode
 set history=1000
 set noshowcmd                " show incomplete commands at the bottom
-set showmode                " show mode at the bottom
+set noshowmode                " show mode at the bottom
 set autoread                " read outside changes
+set ttimeoutlen=50
 
 set scrolloff=10
 
@@ -148,21 +149,22 @@ let no_java_maps=1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_left_alt_sep = '|'
-let g:airline_right_alt_sep = '|'
-let g:airline_symbols.linenr = '¶'
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
+" let g:airline_left_alt_sep = '|'
+" let g:airline_right_alt_sep = '|'
+" let g:airline_symbols.linenr = '¶'
+let g:airline_powerline_fonts = 1
 let g:airline_theme='zenburn'
 let g:airline#extensions#tabline#enabled = 1
 
 function! AirlineInit()
-    let g:airline_section_a = airline#section#create(['branch'])
-    let g:airline_section_b = airline#section#create_left(['hunks'])
-    let g:airline_section_c = airline#section#create(['file'])
-    let g:airline_section_x = airline#section#create(['filetype'])
-    let g:airline_section_y = airline#section#create(['ffenc'])
-    let g:airline_section_z = airline#section#create_right(['%P', '¶ %l:%c'])
+    let g:airline_section_a = airline#section#create_left(['mode', 'paste', 'iminsert'])
+    let g:airline_section_b = airline#section#create(['hunks', 'branch'])
+    let g:airline_section_c = airline#section#create_left(['file', 'filetype'])
+    let g:airline_section_x = airline#section#create(['readonly', ' ', 'ffenc'])
+    let g:airline_section_y = airline#section#create(['%P'])
+    let g:airline_section_z = airline#section#create(['linenr', ':%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
 
@@ -254,6 +256,7 @@ else
     endif
     let g:zenburn_high_Contrast=1
     let g:zenburn_force_dark_Background = 1
+    let g:zenburn_unified_CursorColumn = 1
     colorscheme zenburn
 endif
 
