@@ -25,13 +25,11 @@ NeoBundle "tpope/vim-repeat"
 NeoBundle "tpope/vim-commentary"
 NeoBundle "tpope/vim-vinegar"
 NeoBundle "jnurmine/Zenburn"
-" NeoBundle "airblade/vim-gitgutter"
 NeoBundle "mhinz/vim-signify"
 NeoBundle "Yggdroot/indentLine"
 NeoBundle "tpope/vim-obsession"
 NeoBundle "moll/vim-bbye"
 NeoBundle "scrooloose/syntastic"
-NeoBundle "bling/vim-airline"
 NeoBundle "sheerun/vim-polyglot"
 
 NeoBundleCheck
