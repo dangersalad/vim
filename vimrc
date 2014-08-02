@@ -13,7 +13,7 @@ set relativenumber                 " line numbers
 set backspace=indent,eol,start        " allow backspace in insert mode
 set history=1000
 set noshowcmd                " show incomplete commands at the bottom
-set noshowmode                " show mode at the bottom
+set showmode                " show mode at the bottom
 set autoread                " read outside changes
 set ttimeoutlen=50
 
@@ -49,8 +49,8 @@ set formatoptions=qcrnl
 " set colorcolumn=80
 set splitright splitbelow
 
-" set shortmess+=afilmnrxoOtTI
-set shortmess+=I
+set shortmess+=afilmnrxoOtTI
+" set shortmess+=I
 
 set guifont=DejaVu\ Sans\ Mono\ 8
 set guioptions=aci
