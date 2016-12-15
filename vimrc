@@ -152,6 +152,9 @@ augroup close_tag_plugin
     autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/closetag/plugin/closetag.vim
 augroup END
 
+autocmd FileType apache setlocal commentstring=#\ %s
+autocmd FileType nginx setlocal commentstring=#\ %s
+
 " syntastic settings
 let g:syntastic_always_populate_loc_list=1
 
